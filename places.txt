@@ -1,0 +1,77 @@
+1 Agege
+ 1 Agege
+ 2 Orile-Agege
+2 Ajeromi/Ifelodun
+ 1 Ajeromi
+ 2 Ifelodun
+3 Alimosho
+ 1 Alimosho
+ 2 Agbado/Oke-Odo
+ 3 Ayobo-Ipaja
+ 4 Egbe-Idimu
+ 5 Igando-Ikotun
+ 6 Mosan Okunola
+4 Amuwo-Odofin
+ 1 Amuwo-Odofin
+ 2 Oriade
+5 Apapa
+ 1 Apapa
+ 2 Apapa Iganmu
+6 Badagry
+ 1 Badagry
+ 2 Badagry West
+ 3 Olorunda
+7 Epe
+ 1 Epe
+ 2 Eredo
+ 3 Ikosi Ejinrin
+8 Eti-Osa
+ 1 Eti-Osa East
+ 2 Eti-Osa West
+ 3 Iru Victoria Island
+ 4 Ikoyi-Obalende
+9 Ibeju-Lekki
+ 1 Ibeju
+ 2 Lekki
+10 Ifako/Ijaiye
+ 1 Ifako/Ijaiye
+ 2 Ojokoro
+11 Ikeja
+ 1 Ikeja
+ 2 Ojodu
+ 3 Onigbongbo
+12 Ikorodu
+ 1 Ikorodu
+ 2 Ikorodu North
+ 3 Ikorodu West
+ 4 Imota
+ 5 Ijede
+ 6 Igbogbo-Baiyeku
+13 Kosofe
+ 1 Kosofe
+ 2 Ikosi Isheri
+ 3 Agboyi-Ketu
+14 Lagos Island
+ 1 Lagos Island West
+ 2 Lagos Island East
+15 Lagos Mainland
+ 1 Lagos Mainland
+ 2 Yaba
+16 Mushin
+ 1 Mushin
+ 2 Odi-Olowo
+17 Ojo
+ 1 Ojo
+ 2 Oto Awori
+ 3 Iba
+18 Shomolu
+ 1 Shomolu
+ 2 Bariga
+19 Oshodi/Isolo
+ 1 Ejigbo
+ 2 Isolo
+ 3 Oshodi
+20 Surulere
+ 1 Surulere
+ 2 Coker Aguda
+ 3 Itire-Ikate

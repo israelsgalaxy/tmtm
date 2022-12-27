@@ -5,6 +5,9 @@ import "./styles/App.css";
 import Home from "./pages/Home";
 import { Link, Route, Routes } from "react-router-dom";
 import BookList from "./pages/BookList";
+import Book from "./pages/Book";
+import BookLayout from "./pages/BookLayout";
+import NewBook from "./pages/NewBook";
 
 // const token = localStorage.getItem("token") ?? "0"
 const token = "12345";
@@ -27,7 +30,7 @@ export default function App() {
     <div className="App">
       {/* {details ? <Map details={details} token={token} /> : <p>Loading...</p>} */}
 
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -35,14 +38,22 @@ export default function App() {
           <li>
             <Link to="/books">Books</Link>
           </li>
+          <li>
+            <Link to="/map">Map</Link>
+          </li>
         </ul>
-      </nav>
+      </nav> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/books" element={<BookList />} />
+        <Route path="/books" element={<BookLayout />}>
+          <Route index element={<BookList />} />
+          <Route path=":id" element={<Book />} />
+          <Route path="new" element={<NewBook />} />
+          {/* <Route path="/books/:id" element={<Book />} /> */}
+        </Route>
         <Route path="/map" element={<Map details={details} token={token} />} />
-        <Route path="/" element={<Map details={details} token={token} />} />
+        <Route path="*" element={<h1>Not found</h1>} />
       </Routes>
     </div>
   );

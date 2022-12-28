@@ -3,6 +3,7 @@ import Map from "./pages/map";
 import points from "./points.js";
 import "./styles/App.css";
 import Home from "./pages/Home";
+import SignUpForm from "./pages/Register";
 import { Link, Route, Routes } from "react-router-dom";
 import BookList from "./pages/BookList";
 import Book from "./pages/Book";
@@ -45,7 +46,7 @@ export default function App() {
       </nav> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<SignUpForm />} />
         <Route path="/books" element={<BookLayout />}>
           <Route index element={<BookList />} />
           <Route path=":id" element={<Book />} />

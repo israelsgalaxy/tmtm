@@ -39,8 +39,9 @@ const Home = () => {
                   TMTM helps you find people who are headed to the same location
                   as you, so you can share a ride and split the cost with them
                 </Typography>
-                <Box mt={5}>
+                <Box mt={500} >
                   <Button
+                  type="submit"
                     variant="contained"
                     color="primary"
                     size="large"

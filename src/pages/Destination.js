@@ -2,6 +2,10 @@ import { ThemeProvider } from "@emotion/react";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer";
 import Grid from "@mui/material/Grid";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import {
   FormControl,
   InputLabel,
@@ -19,17 +23,24 @@ import {
   Step,
   StepLabel,
   Paper,
+  Stack,
+  MenuItem,
+  Select,
 } from "@mui/material";
+// import
 import HorizontalLinearStepper from "./Stepper";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 import { useState } from "react";
 
 const Destination = () => {
+  const [answer, setAnswer] = useState("");
+  const [value, setValue] = useState(null);
   //   const classes = useStyles();
-  const [showPassword, setShowPassword] = useState(false);
 
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleChange = (event) => {
+    setAnswer(event.target.value);
+  };
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -40,6 +51,9 @@ const Destination = () => {
   };
 
   const theme = createTheme({
+    typography: {
+      fontFamily: "Inter, sans-serif",
+    },
     palette: {
       primary: {
         main: "#4FC4CF",
@@ -54,120 +68,176 @@ const Destination = () => {
 
       <Paper
         elevation={3}
-        sx={{ p: 10, margin: "auto", maxWidth: 853, flexGrow: 1, mt: 5 }}
+        sx={{
+          p: 10,
+          margin: "auto",
+          maxWidth: 853,
+          flexGrow: 1,
+          mt: 5,
+          fontFamily: "Inter, sans-serif",
+        }}
       >
         <Container component="main" maxWidth="sm">
           <CssBaseline />
           <ThemeProvider theme={theme}>
             {/* <FormControl> */}
-            <Box
+            {/* <Box
               component="form"
               sx={{
-                "& .MuiTextField-root": { m: 1, width: "25ch" },
+                "& .MuiTextField-root": { m: 0, width: "552px", mt: 0.5, ml: 0 },
               }}
               noValidate
               autoComplete="off"
+            > */}
+            <div
+            // style={{
+            //   backgroundColor: "#1EE23D",
+            // }}
             >
-              <div
-              // style={{
-              //   backgroundColor: "#1EE23D",
-              // }}
-              >
-                <form noValidate>
-                  <Grid container spacing={0.5}>
-                    <Grid item xs={12}>
-                      <FormControl sx={{ m: 0, width: "100%" }}>
-                        <InputLabel htmlFor="outlined-adornment-amount">
-                          Telegram username
-                        </InputLabel>
-                        <OutlinedInput
-                          id="outlined-telegramID-input"
-                          startAdornment={
-                            <InputAdornment position="start">@</InputAdornment>
-                          }
-                          label="Telegram username"
-                          //   defaultValue="victorrwill"
-                          autoComplete="nigga-stfu"
-                        />
-                      </FormControl>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <FormControl
-                        sx={{ m: 0, width: "100%", mt: 1 }}
-                        variant="outlined"
-                      >
-                        <InputLabel htmlFor="outlined-adornment-amount">
-                          Email
-                        </InputLabel>
-                        <OutlinedInput
-                          id="outlined-adornment-weight"
-                          endAdornment={
-                            <InputAdornment position="end">
-                              @stu.cu.edu.ng
-                            </InputAdornment>
-                          }
-                          label="Email"
-                          aria-describedby="outlined-weight-helper-text"
-                          inputProps={{
-                            "aria-label": "weight",
-                          }}
-                        />
-                        <FormHelperText id="outlined-weight-helper-text"></FormHelperText>
-                      </FormControl>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <FormControl
-                        sx={{ m: 0, width: "100%", mt: 0.5, mb: 2 }}
-                        variant="outlined"
-                      >
-                        <InputLabel htmlFor="outlined-adornment-password">
-                          Password
-                        </InputLabel>
-                        <OutlinedInput
-                          id="outlined-adornment-password"
-                          type={showPassword ? "text" : "password"}
-                          endAdornment={
-                            <InputAdornment position="end">
-                              <IconButton
-                                aria-label="toggle password visibility"
-                                onClick={handleClickShowPassword}
-                                onMouseDown={handleMouseDownPassword}
-                                edge="end"
-                              >
-                                {showPassword ? (
-                                  <VisibilityOff />
-                                ) : (
-                                  <Visibility />
-                                )}
-                              </IconButton>
-                            </InputAdornment>
-                          }
-                          label="Password"
-                        />
-                        <FormHelperText id="outlined-weight-helper-text">
-                          By continuing, you agree that we create an account for
-                          you (unless already created), and accept our Terms and
-                          Conditions and Privacy Policy.
-                        </FormHelperText>
-                      </FormControl>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={handleSubmit}
-                        size="large"
-                        disableElevation
-                        fullWidth
-                        // sx={{ width: "100%", maxWidth: 1000 }}
-                      >
-                        Next
-                      </Button>
-                    </Grid>
+              <form noValidate>
+                <Grid container spacing={0.5}>
+                  <Grid item xs={12}>
+                    <FormControl sx={{ m: 0, width: "100%" }}>
+                      <InputLabel htmlFor="outlined-adornment-amount">
+                        Where are you going to?
+                      </InputLabel>
+                      <OutlinedInput
+                        id="outlined-telegramID-input"
+                        label="Where are you going to?"
+                        autoComplete="nigga-stfu"
+                      />
+                    </FormControl>
                   </Grid>
-                </form>
-              </div>
-            </Box>
+                  <Grid item xs={12}>
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                      <DatePicker
+                        //   fullWidth
+                        inputFormat="dd/mm/yyyy"
+                        label="What day are you leaving?"
+                        value={value}
+                        onChange={(newValue) => {
+                          setValue(newValue);
+                        }}
+                        renderInput={(params) => (
+                          <TextField
+                            {...params}
+                            fullWidth
+                            sx={{ m: 0, width: "100%", mt: 1, mb: 0 }}
+                          />
+                        )}
+                      />
+                    </LocalizationProvider>
+                  </Grid>
+                  {/* <Grid
+                    container
+                    spacing={{ xs: 1, md: 1.5 }}
+                  > */}
+                  <Grid item xs={12} md={6}>
+                    <FormControl
+                      sx={{ m: 0, width: "100%", mt: 1, mb: 0, mr: 1 }}
+                      fullWidth
+                    >
+                      <InputLabel id="demo-simple-select-label">
+                        Do you already have a ride?
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={answer}
+                        label="Do you already have a ride?"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={true}>Yes</MenuItem>
+                        <MenuItem value={false}>No</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <FormControl
+                      sx={{
+                        m: 0,
+                        width: { xs: "100%", md: "97%" },
+                        mt: 1,
+                        mb: 0,
+                        ml: { xs: 0, md: 1 },
+                      }}
+                    >
+                      <InputLabel htmlFor="outlined-adornment-amount">
+                        How much is the ride fee?
+                      </InputLabel>
+                      <OutlinedInput
+                        id="outlined-telegramID-input"
+                        startAdornment={
+                          <InputAdornment position="start">₦</InputAdornment>
+                        }
+                        label="How much is the ride fee?"
+                        //   defaultValue="victorrwill"
+                        autoComplete="nigga-stfu"
+                      />
+                    </FormControl>
+                  </Grid>
+                  {/* </Grid> */}
+                  <Grid item xs={12} md={6}>
+                    <FormControl
+                      sx={{ m: 0, width: "100%", mt: 1, mb: 0 }}
+                      fullWidth
+                    >
+                      <InputLabel id="demo-simple-select-label">
+                        Do you already have a ride?
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={answer}
+                        label="Do you already have a ride?"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={true}>Yes</MenuItem>
+                        <MenuItem value={false}>No</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                      <TimePicker
+                        label="When would you be leaving?"
+                        value={value}
+                        onChange={(newValue) => {
+                          setValue(newValue);
+                        }}
+                        renderInput={(params) => (
+                          <TextField
+                            {...params}
+                            fullWidth
+                            sx={{
+                              m: 0,
+                              width: { xs: "100%", md: "97%" },
+                              mt: 1,
+                              mb: 2,
+                              ml: { xs: 0, md: 1 },
+                            }}
+                          />
+                        )}
+                      />
+                    </LocalizationProvider>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={handleSubmit}
+                      size="large"
+                      disableElevation
+                      fullWidth
+                      // sx={{ width: "100%", maxWidth: 1000 }}
+                    >
+                      Next
+                    </Button>
+                  </Grid>
+                </Grid>
+              </form>
+            </div>
+            {/* </Box> */}
           </ThemeProvider>
         </Container>
       </Paper>

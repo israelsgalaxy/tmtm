@@ -4,6 +4,7 @@ import points from "./points.js";
 import "./styles/App.css";
 import Home from "./pages/Home";
 import SignUpForm from "./pages/Register";
+import Picker from "./pages/Datepicker";
 import Destination from "./pages/Destination";
 import { Link, Route, Routes } from "react-router-dom";
 import BookList from "./pages/BookList";
@@ -48,7 +49,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Destination />} />
-        <Route path="/books" element={<BookLayout />}>
+        <Route path="/personal" element={<SignUpForm />}>
           <Route index element={<BookList />} />
           <Route path=":id" element={<Book />} />
           <Route path="new" element={<NewBook />} />

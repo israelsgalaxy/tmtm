@@ -25,7 +25,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 import { useState } from "react";
 
-const SignUpForm = () => {
+const Destination = () => {
   //   const classes = useStyles();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -176,4 +176,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default Destination;

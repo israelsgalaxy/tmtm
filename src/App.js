@@ -6,11 +6,9 @@ import Home from "./pages/Home";
 import SignUpForm from "./pages/Register";
 import Destination from "./pages/Destination";
 import { Link, Route, Routes } from "react-router-dom";
-import BookList from "./pages/BookList";
-import Book from "./pages/Book";
-import NewBook from "./pages/NewBook";
 import { createTheme, ThemeProvider } from "@mui/material";
 import themes from "./pages/theme";
+import MapPage from "./pages/MapPage";
 
 // const token = localStorage.getItem("token") ?? "0"
 const token = "12345";
@@ -37,11 +35,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
-          <Route path="/personal" element={<SignUpForm />}>
-            <Route index element={<BookList />} />
-            <Route path=":id" element={<Book />} />
-            <Route path="new" element={<NewBook />} />
-          </Route>
+          <Route path="/personal" element={<SignUpForm />} />
+          <Route path="/map" element={<MapPage />} />
           <Route
             path="/map"
             element={<Map details={details} token={token} />}

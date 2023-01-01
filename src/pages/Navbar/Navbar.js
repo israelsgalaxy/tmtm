@@ -8,9 +8,9 @@ const Navbar = () => {
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed" color="inherit">
-          <Toolbar>
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+        <AppBar position="fixed" color="secondary" elevation={0}>
+          <Toolbar >
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
               TMTM
             </Typography>
             <Button color="inherit">THE DEVELOPERS</Button>

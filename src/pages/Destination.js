@@ -27,7 +27,6 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
-// import
 import HorizontalLinearStepper from "./Stepper";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
@@ -51,12 +50,14 @@ const Destination = () => {
   };
 
   const theme = createTheme({
-    typography: {
-      fontFamily: "Raleway, sans-serif",
-    },
     palette: {
       primary: {
         main: "#4FC4CF",
+      },
+    },
+    typography: {
+      button: {
+        fontWeight: 700,
       },
     },
   });
@@ -68,32 +69,12 @@ const Destination = () => {
 
       <Paper
         elevation={3}
-        sx={{
-          p: 10,
-          margin: "auto",
-          maxWidth: 853,
-          flexGrow: 1,
-          mt: 5,
-          fontFamily: "Inter, sans-serif",
-        }}
+        sx={{ p: 10, margin: "auto", maxWidth: 853, mt: 5, mb: 20 }}
       >
         <Container component="main" maxWidth="sm">
           <CssBaseline />
           <ThemeProvider theme={theme}>
-            {/* <FormControl> */}
-            {/* <Box
-              component="form"
-              sx={{
-                "& .MuiTextField-root": { m: 0, width: "552px", mt: 0.5, ml: 0 },
-              }}
-              noValidate
-              autoComplete="off"
-            > */}
-            <div
-            // style={{
-            //   backgroundColor: "#1EE23D",
-            // }}
-            >
+            <div>
               <form noValidate>
                 <Grid container spacing={0.5}>
                   <Grid item xs={12}>
@@ -245,8 +226,9 @@ const Destination = () => {
                 </Grid>
               </form>
             </div>
-            {/* </Box> */}
           </ThemeProvider>
+
+          {/* </Box> */}
         </Container>
       </Paper>
       <Footer />

@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 const steps = ["Personal details", "Destination details"];
 
 export default function HorizontalLinearStepper() {
-  const [activeStep, setActiveStep] = React.useState(1);
+  const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
   const isStepOptional = (step) => {

@@ -4,13 +4,13 @@ import points from "./points.js";
 import "./styles/App.css";
 import Home from "./pages/Home";
 import SignUpForm from "./pages/Register";
-import Picker from "./pages/Datepicker";
 import Destination from "./pages/Destination";
 import { Link, Route, Routes } from "react-router-dom";
 import BookList from "./pages/BookList";
 import Book from "./pages/Book";
-import BookLayout from "./pages/BookLayout";
 import NewBook from "./pages/NewBook";
+import { createTheme, ThemeProvider } from "@mui/material";
+import themes from "./pages/theme";
 
 // const token = localStorage.getItem("token") ?? "0"
 const token = "12345";
@@ -30,35 +30,25 @@ export default function App() {
   // }, [])
 
   return (
-    <div className="App">
-      {/* {details ? <Map details={details} token={token} /> : <p>Loading...</p>} */}
+    <ThemeProvider theme={themes}>
+      <div className="App">
+        {/* {details ? <Map details={details} token={token} /> : <p>Loading...</p>} */}
 
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/books">Books</Link>
-          </li>
-          <li>
-            <Link to="/map">Map</Link>
-          </li>
-        </ul>
-      </nav> */}
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
-        <Route path="/personal" element={<SignUpForm />}>
-          <Route index element={<BookList />} />
-          <Route path=":id" element={<Book />} />
-          <Route path="new" element={<NewBook />} />
-          {/* <Route path="/books/:id" element={<Book />} /> */}
-        </Route>
-        <Route path="/map" element={<Map details={details} token={token} />} />
-        <Route path="*" element={<h1>Not found</h1>} />
-      </Routes>
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/destination" element={<Destination />} />
+          <Route path="/personal" element={<SignUpForm />}>
+            <Route index element={<BookList />} />
+            <Route path=":id" element={<Book />} />
+            <Route path="new" element={<NewBook />} />
+          </Route>
+          <Route
+            path="/map"
+            element={<Map details={details} token={token} />}
+          />
+          <Route path="*" element={<h1>Not found</h1>} />
+        </Routes>
+      </div>
+    </ThemeProvider>
   );
 }

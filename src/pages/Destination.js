@@ -52,7 +52,7 @@ const Destination = () => {
 
   const theme = createTheme({
     typography: {
-      fontFamily: "Inter, sans-serif",
+      fontFamily: "Raleway, sans-serif",
     },
     palette: {
       primary: {
@@ -112,7 +112,7 @@ const Destination = () => {
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                       <DatePicker
                         //   fullWidth
-                        inputFormat="dd/mm/yyyy"
+                        inputFormat="DD/MM/YYYY"
                         label="What day are you leaving?"
                         value={value}
                         onChange={(newValue) => {
@@ -183,7 +183,7 @@ const Destination = () => {
                       fullWidth
                     >
                       <InputLabel id="demo-simple-select-label">
-                        Do you already have a ride?
+                        Are you taking a flight?
                       </InputLabel>
                       <Select
                         labelId="demo-simple-select-label"
@@ -200,7 +200,7 @@ const Destination = () => {
                   <Grid item xs={12} md={6}>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                       <TimePicker
-                        label="When would you be leaving?"
+                        label="Flight time?"
                         value={value}
                         onChange={(newValue) => {
                           setValue(newValue);
@@ -213,7 +213,7 @@ const Destination = () => {
                               m: 0,
                               width: { xs: "100%", md: "97%" },
                               mt: 1,
-                              mb: 2,
+                              mb: 0,
                               ml: { xs: 0, md: 1 },
                             }}
                           />
@@ -221,6 +221,14 @@ const Destination = () => {
                       />
                     </LocalizationProvider>
                   </Grid>
+                  <FormHelperText
+                    id="outlined-weight-helper-text"
+                    sx={{ width: "100%", mb: 3, ml: 2 }}
+                  >
+                    By continuing, you agree that we create an account for you
+                    (unless already created), and accept our Terms and
+                    Conditions and Privacy Policy.
+                  </FormHelperText>
                   <Grid item xs={12}>
                     <Button
                       variant="contained"

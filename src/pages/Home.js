@@ -35,13 +35,13 @@ const Home = () => {
                 <Typography variant="h3" gutterBottom>
                   It’s a simple, cheap and fun way to commute together.
                 </Typography>
-                <Typography variant="body1" gutterBottom paragraph={true}>
+                <Typography variant="h6" gutterBottom paragraph={true}>
                   TMTM helps you find people who are headed to the same location
                   as you, so you can share a ride and split the cost with them
                 </Typography>
-                <Box mt={500} >
+                <Box mt={500}>
                   <Button
-                  type="submit"
+                    type="submit"
                     variant="contained"
                     color="primary"
                     size="large"

@@ -48,7 +48,8 @@ export default function App() {
       </nav> */}
 
       <Routes>
-        <Route path="/" element={<Destination />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/destination" element={<Destination />} />
         <Route path="/personal" element={<SignUpForm />}>
           <Route index element={<BookList />} />
           <Route path=":id" element={<Book />} />

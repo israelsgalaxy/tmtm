@@ -13,10 +13,10 @@ const themes = createTheme({
     background: {
       default: "#fffffe",
     },
-    // text: {
-    //   primary: "#171717",
-    //   secondary: "#2e2e2e",
-    // },
+    text: {
+      primary: "#181818",
+      secondary: "#2e2e2e",
+    },
   },
   typography: {
     h2: {

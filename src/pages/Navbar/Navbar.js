@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed" color="secondary" elevation={0}>
-          <Toolbar >
+        <AppBar position="fixed" color="secondary">
+          <Toolbar>
             <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
               TMTM
             </Typography>

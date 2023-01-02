@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "date-fns": "^2.29.3",
     "dayjs": "^1.11.7",
+    "formik": "^2.2.9",
     "maplibre-gl": "^2.4.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
@@ -24,6 +25,7 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
+    "yup": "^0.32.11",
     "zod": "^3.20.2"
   },
   "scripts": {

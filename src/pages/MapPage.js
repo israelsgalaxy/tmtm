@@ -19,7 +19,7 @@ import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 //
 import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -275,7 +275,7 @@ const MapPage = (props) => {
           </Box>
         </ThemeProvider>
       </Box>
-      {/* {details ? <Map details={details} token={token} /> : <p>Loading...</p>} */}
+      {details ? <Map details={details} token={token} /> : <p>Loading...</p>}
     </>
   );
 };

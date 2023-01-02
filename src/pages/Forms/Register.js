@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import Grid from "@mui/material/Grid";
 import {
   FormControl,
@@ -20,7 +20,7 @@ import {
   StepLabel,
   Paper,
 } from "@mui/material";
-import HorizontalLinearStepper from "./Stepper";
+import HorizontalLinearStepper from "../Stepper";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 import { useState } from "react";

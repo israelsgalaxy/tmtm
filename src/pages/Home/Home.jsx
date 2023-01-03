@@ -1,10 +1,10 @@
-import Navbar from "./Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import heroImg from "../images/carpool.png";
+import heroImg from "../../images/carpool.png";
 import { CssBaseline, Container, Button, Paper } from "@mui/material";
-import Footer from "./Footer/Footer";
+import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -42,7 +42,7 @@ const Home = () => {
                   as you, so you can share a ride and split the cost with them.
                 </Typography>
                 <Box mt={5}>
-                  <Link to="/personal" style={{ textDecoration: "none" }}>
+                  <Link to="/register" style={{ textDecoration: "none" }}>
                     <Button
                       type="submit"
                       variant="contained"
@@ -81,7 +81,7 @@ const Home = () => {
               backgroundColor: "secondary.main",
               p: 7,
               mt: 0,
-              width: "80%",
+              width: "93%",
               maxWidth: 1150,
             }}
           >
@@ -106,6 +106,7 @@ const Home = () => {
                 align="center"
                 sx={{
                   maxWidth: 800,
+                  margin: "auto",
                 }}
               >
                 Going to the airport for vacation but don't want to pay full

@@ -48,7 +48,7 @@
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="footer">
       Made with ❤️ by{" "}
       <a href="https://ng.linkedin.com/in/israel-galadima-446a54198">Israel</a>{" "}
       and{" "}

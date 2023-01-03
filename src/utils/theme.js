@@ -15,7 +15,7 @@ const themes = createTheme({
     },
     text: {
       primary: "#181818",
-      secondary: "#2e2e2e",
+      // secondary: "#2e2e2e",
     },
   },
   typography: {
@@ -40,6 +40,10 @@ const themes = createTheme({
       fontWeight: 500,
     },
     body1: {
+      fontSize: "1rem",
+      fontWeight: 500,
+    },
+    body2: {
       fontSize: "1rem",
       fontWeight: 500,
     },

@@ -1,5 +1,5 @@
 import Map from "./map";
-import points from "../points.js";
+import points from "../../utils/points";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -18,8 +18,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 //
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -43,6 +43,7 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 //
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -220,7 +221,9 @@ const MapPage = (props) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-              TMTM
+              <Link to="/" style={{ textDecoration: "none" }}>
+                TMTM
+              </Link>
             </Typography>
             <Button color="inherit">THE DEVELOPERS</Button>
           </Toolbar>

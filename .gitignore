@@ -7,3 +7,4 @@
 /Client/*.DS_Store
 /Client/.env
 /Client/.env.local
+/.env

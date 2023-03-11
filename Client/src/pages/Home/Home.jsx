@@ -2,7 +2,6 @@ import Navbar from "../Navbar/Navbar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import heroImg from "../../images/carpool.png";
 import { CssBaseline, Container, Button, Paper } from "@mui/material";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
@@ -42,7 +41,7 @@ const Home = () => {
                   as you, so you can share a ride and split the cost with them.
                 </Typography>
                 <Box mt={5}>
-                  <Link to="/register" style={{ textDecoration: "none" }}>
+                  <Link to="/map" style={{ textDecoration: "none" }}>
                     <Button
                       type="submit"
                       variant="contained"
@@ -50,15 +49,10 @@ const Home = () => {
                       size="large"
                       disableElevation
                     >
-                      Get Started
+                      Try it Out
                     </Button>
                   </Link>
                 </Box>
-              </Box>
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <Box sx={{ width: "100%" }} mt={0} ml={0}>
-                <img src={heroImg} alt="" width="100%" />
               </Box>
             </Grid>
           </Grid>

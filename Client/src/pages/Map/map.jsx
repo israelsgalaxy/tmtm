@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css";
-import "../../styles/map.css";
+import "../../styles/index.css";
 import maplibregl from "maplibre-gl";
 import MaplibreGeocoder from "@maplibre/maplibre-gl-geocoder";
 

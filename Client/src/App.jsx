@@ -1,11 +1,12 @@
 import "./styles/index.css";
-// import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 import themes from "./utils/theme";
-import MapPage from "./pages/Map/MapPage";
+// import Home from "./pages/Home/Home";
+import MapPage from "./pages/Map";
 import NotFound from "./pages/NotFound";
 import HomePage from "./pages/HomePage";
+import Find from "./pages/Find";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/map" element={<MapPage />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<HomePage />} />
+          <Route path="/find" element={<Find />} />
         </Routes>
       </div>
     </ThemeProvider>

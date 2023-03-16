@@ -82,40 +82,6 @@ function Sidebar({ show, close }) {
             </Link>
             <hr className="bg-blueDeep opacity-50" />
           </div>
-          <div className="absolute bottom-0 lg:flex left-0 justify-center border-r bg-gray-200 border-gray-300 px-3 xl:py-4 dark:bg-gray-800 z-20 font-raleway w-full">
-            <div className="lg:hidden flex w-full rounded-md px-2 py-8 justify-between items-center lg:bg-gray-300 dark:bg-gray-800 cursor-pointer">
-              <i
-                className="fa-solid fa-right-from-bracket fa-lg fa-2x text-gray-900 dark:text-white !hover:text-blueDeep group"
-                onClick={() => {
-                  //   cookie.remove("jwt");
-                  window.location.href = "/login";
-                }}
-              ></i>
-            </div>
-
-            <div className="hidden lg:flex w-full rounded-md px-2 py-3 justify-between items-center lg:bg-gray-300 dark:bg-gray-700 cursor-pointer">
-              <i className="fas fa-user-circle fa-2x fa-fw my-auto text-gray-900 dark:text-blueDeep mr-2"></i>
-              <div className="overflow-x-hidden font-raleway">
-                <p className="text-gray-500 dark:text-gray-400 overflow-hidden">
-                  {/* {user.firstname ? user.firstname : user.displayName} */}
-                  Toluwalope
-                </p>
-                <small className="text-gray-500 dark:text-gray-400 overflow-hidden">
-                  {/* {user.email} */}
-                  JohnDoe@gmail.com
-                </small>
-              </div>
-              <p
-                className=" text-gray-500 hover:text-gray-900 p-3 cursor-pointer dark:text-gray-400 dark:hover:bg-blueDeep dark:hover:text-white hover:rounded-md"
-                onClick={() => {
-                  //   cookie.remove("jwt");
-                  window.location.href = "/login";
-                }}
-              >
-                <i className="fas fa-sign-out-alt fa-lg fa-fw py-auto text-gray-700 dark:text-gray-300 hover:text-blueDeep"></i>
-              </p>
-            </div>
-          </div>
         </aside>
       </section>
     </>

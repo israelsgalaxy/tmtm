@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { formatDate } from "../utils/format";
-import { DatePicker } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import TextField from "@mui/material/TextField";
+import { Link } from "react-router-dom";
 
 const BudgetModal = ({ close, data, deleteBudget }) => {
   const date = new Date();
@@ -35,15 +32,23 @@ const BudgetModal = ({ close, data, deleteBudget }) => {
           onSubmit={handleEditBudgetSubmit}
         >
           <div className="flex items-center justify-between mb-4">
+            <Link to="/">
+              <span
+                className="py-2 px-4 bg-gray-300 border border-blueDeep text-blueDeep hover:dark:bg-gray-800 hover:bg-blueDeep hover:text-white rounded-md dark:bg-gray-700 cursor-pointer"
+                onClick={() => close(false)}
+              >
+                <i className="fas fa-chevron-left fa-md fa-fw"></i>
+                <span className="text-md font-raleway">Back</span>
+              </span>
+            </Link>
+          </div>
+
+          <hr className="bg-blueDeep dark:bg-gray-300" />
+
+          <div className="flex items-center justify-between my-4">
             <p className="text-xl font-raleway text-gray-800 dark:text-gray-300 py-auto">
-              Edit Budget
+              Ride details.
             </p>
-            <span
-              className="p-2 bg-gray-300 opacity-50 hover:opacity-90 border border-blueDeep hover:dark:bg-gray-800 rounded-md dark:bg-gray-700 cursor-pointer"
-              onClick={() => close(false)}
-            >
-              <i className="fas fa-xmark fa-lg fa-fw text-xl  text-blueDeep"></i>
-            </span>
           </div>
 
           <div className="text-gray-800 dark:text-gray-300 font-raleway">
@@ -152,12 +157,14 @@ const BudgetModal = ({ close, data, deleteBudget }) => {
               <div className="flex items-center justify-center rounded-md border border-blueDeep">
                 <input
                   className="py-2 px-4 text-lg rounded-l font-light font-number focus:outline-none focus:border-blueDeep w-full bg-gray-200 dark:bg-gray-800 dark:text-gray-300"
-                  type="text"
+                  type="date"
                   name="startDate"
                   id="startDate"
                   autoComplete="off"
-                  placeholder={formatDate(budget.startDate)}
-                  value={formatDate(budget.startDate)}
+                  defaultValue={new Date().toISOString().slice(0, 10)}
+                  required
+                  // placeholder={formatDate(budget.startDate)}
+                  // value={formatDate(budget.startDate)}
                   onChange={(e) =>
                     setBudget({
                       ...budget,
@@ -173,27 +180,6 @@ const BudgetModal = ({ close, data, deleteBudget }) => {
                   <i className="fas fa-calendar-days fa-lg fa-fw"></i>
                 </button>
               </div>
-
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                  inputFormat="DD/MM/YYYY"
-                  label="What day are you leaving?"
-                  value={budget.startDate}
-                  onChange={(newValue) => {
-                    setBudget({
-                      ...budget,
-                      startDate: newValue,
-                    });
-                  }}
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      fullWidth
-                      sx={{ m: 0, width: "100%", mt: 4, mb: 0 }}
-                    />
-                  )}
-                />
-              </LocalizationProvider>
             </div>
           </div>
 

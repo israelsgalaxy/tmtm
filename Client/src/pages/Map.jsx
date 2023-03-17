@@ -6,8 +6,8 @@ const Map = () => {
   return (
     <>
       <Sidebar show={show} close={setShow} />
-      <section className="absolute left-0 md:left-80 lg:left-96 bg-gray-200 dark:bg-gray-800  min-h-screen font-raleway">
-        <main className="min-w-full bg-gray-100 p-5 sm:p-9">
+      <section className="left-0 md:left-80 lg:left-96 bg-gray-200 dark:bg-gray-800  min-h-screen font-raleway">
+        <main className="min-w-full p-5 sm:p-9">
           <div></div>
         </main>
       </section>

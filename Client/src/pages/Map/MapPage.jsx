@@ -66,13 +66,13 @@ const darkTheme = createTheme({
 const MapPage = (props) => {
   let details = useState(points)[0];
 
-  const [answer, setAnswer] = useState("");
+  // const [answer, setAnswer] = useState("");
   const [value, setValue] = useState(null);
   //   const classes = useStyles();
 
-  const handleChange = (event) => {
-    setAnswer(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   setAnswer(event.target.value);
+  // };
 
   function handleSubmit(event) {
     event.preventDefault();

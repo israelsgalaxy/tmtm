@@ -54,12 +54,12 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="flex flex-row flex-wrap py-6 md:items-center justify-between text-gray-700 px-9"
+        className="flex flex-row flex-wrap py-6 md:items-center justify-between text-gray-700 px-4 md:px-9 xl:px-20"
         id="navbar"
       >
         <div className="flex">
           <Link to="/">
-            <p className="flex items-center md:mb-0 mr-3">
+            <p className="flex items-center md:mb-0 mr-3 hover:scale-110">
               <i className="fas fa-car fa-lg fa-fw text-blueDeep"></i>
               <span className="text-blueDeep font-raleway font-normal text-lg">
                 Cab

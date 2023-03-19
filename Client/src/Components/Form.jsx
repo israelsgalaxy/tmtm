@@ -17,6 +17,7 @@ const BudgetModal = () => {
   const handleEditBudgetSubmit = async (e) => {
     setIsLoading(true);
     e.preventDefault();
+    console.log(rideDetails);
   };
 
   return (
@@ -172,9 +173,10 @@ const BudgetModal = () => {
             </div>
           </div>
 
+          {/* <Link to="/find"></Link> */}
           <div className="flex mt-6">
             <button
-              className="bg-blueDeep hover:bg-blue-600 text-white font-normal py-3 px-4 rounded w-full"
+              className="bg-blueDeep hover:bg-yellow-600 text-white font-normal py-3 px-4 rounded w-full"
               type="submit"
             >
               <i

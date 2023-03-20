@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   //   let cookies = new Cookies();
   //   const { user } = useUser();
-  let user = false;
+  // let user = false;
   const [active, setActive] = useState("dashboard");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -155,7 +155,7 @@ const Navbar = () => {
 
       <div
         id="menu"
-        className="hidden absolute z-90 w-0 justify-center text-gray-800 dark:text-blueDeep bg-gray-200 dark:bg-gray-800 opacity-0 font-raleway font-medium text-lg overflow-y-scroll"
+        className="hidden absolute z-90 w-0 justify-center text-gray-800 dark:text-blueDeep bg-gray-100 opacity-100 dark:bg-gray-800 font-raleway font-medium text-lg overflow-y-scroll"
       >
         <div className="flex flex-col text-center items-center text-xl text-gray-800 dark:text-gray-300 py-6 w-full">
           {navElements.map((element, index) => (
@@ -163,7 +163,7 @@ const Navbar = () => {
               <p
                 className={`!text-md font-light my-6 hover:text-blueDeep ${
                   active === element.link
-                    ? "text-blueDeep text-xl"
+                    ? "text-blueDeep text-xl font-bold"
                     : "text-gray-700 dark:text-white"
                 }`}
               >

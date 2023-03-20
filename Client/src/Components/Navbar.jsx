@@ -37,12 +37,12 @@ const Navbar = () => {
   function menuToggle() {
     if (isOpen) {
       let menu = document.getElementById("menu");
-      menu.classList.add("w-0", "h-0", "opacity-0", "hidden");
-      menu.classList.remove("w-screen", "min-h-screen", "opacity-95", "flex");
+      menu.classList.add("w-0", "opacity-0", "hidden");
+      menu.classList.remove("w-screen", "opacity-95", "flex");
     } else {
       var menu = document.getElementById("menu");
-      menu.classList.add("w-screen", "min-h-screen", "opactiy-95", "flex");
-      menu.classList.remove("w-0", "h-0", "opacity-0", "hidden");
+      menu.classList.add("w-screen", "opactiy-95", "flex");
+      menu.classList.remove("w-0", "opacity-0", "hidden");
     }
     setIsOpen(!isOpen);
   }
@@ -155,9 +155,9 @@ const Navbar = () => {
 
       <div
         id="menu"
-        className="hidden z-90 w-0 h-0 justify-center text-gray-800 dark:text-blueDeep bg-gray-200 dark:bg-gray-800 opacity-0 font-raleway font-medium text-lg overflow-y-scroll"
+        className="hidden absolute z-90 w-0 justify-center text-gray-800 dark:text-blueDeep bg-gray-200 dark:bg-gray-800 opacity-0 font-raleway font-medium text-lg overflow-y-scroll"
       >
-        <div className="flex flex-col text-center items-center text-xl text-gray-800 dark:text-gray-300 pt-6 w-full">
+        <div className="flex flex-col text-center items-center text-xl text-gray-800 dark:text-gray-300 py-6 w-full">
           {navElements.map((element, index) => (
             <Link to={element.link} key={index}>
               <p
@@ -171,18 +171,6 @@ const Navbar = () => {
               </p>
             </Link>
           ))}
-          {user ? (
-            <Link to="/dashboard">
-              <p className="font-light my-6 hover:text-blueDeep">Dashboard</p>
-            </Link>
-          ) : (
-            <Link to="/login">
-              <p className="font-light my-6 hover:text-blueDeep">Sign In</p>
-            </Link>
-          )}
-          {/* <div className="my-6">
-            <Toggle />
-          </div> */}
         </div>
       </div>
     </>

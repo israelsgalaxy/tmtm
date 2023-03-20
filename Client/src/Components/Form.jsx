@@ -28,7 +28,7 @@ const BudgetModal = () => {
           autoComplete="new-password"
           onSubmit={handleEditBudgetSubmit}
         >
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4 mt-2">
             <Link to="/">
               <span className="py-2 px-4 bg-gray-300 border border-blueDeep text-blueDeep hover:dark:bg-gray-800 hover:bg-blueDeep hover:text-white rounded-md dark:bg-gray-700 cursor-pointer">
                 <i className="fas fa-chevron-left fa-md fa-fw"></i>
@@ -37,9 +37,7 @@ const BudgetModal = () => {
             </Link>
           </div>
 
-          <hr className="!bg-blueDeep" />
-
-          <div className="flex items-center justify-between mt-8 mb-4">
+          <div className="flex items-center justify-between mt-6 mb-4">
             <p className="text-2xl font-raleway font-bold text-gray-800 dark:text-gray-300 py-auto">
               Ride details.
             </p>

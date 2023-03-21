@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <>
-      <Navbar />
+      <div className="absolute w-full">
+        <Navbar />
+      </div>
       <div className="h-screen flex justify-center items-center">
         <div className="container mx-auto flex flex-col lg:flex-row lg:space-x-8 px-4 md:px-0">
           <div className="left lg:w-1/2 flex flex-col justify-center items-center md:items-start mb-8">

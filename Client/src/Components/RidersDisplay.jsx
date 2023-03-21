@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const PaginatedTransactions = ({ transactions }) => {
   const [currentPage, setCurrentPage] = useState(1);

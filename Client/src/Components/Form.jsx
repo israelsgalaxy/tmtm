@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import { v4 as uuidV4 } from "uuid";
+import useFetch from "../hooks/useFetch";
+import { useNavigate } from "react-router-dom";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const BudgetModal = () => {
+  const navigate = useNavigate();
+  const { fetchURL } = useFetch();
   const [isLoading, setIsLoading] = useState(false);
   const [showDatePickers, setShowDatePickers] = useState(false);
 
@@ -14,10 +19,30 @@ const BudgetModal = () => {
     uuid: "",
   });
 
-  const handleEditBudgetSubmit = async (e) => {
-    setIsLoading(true);
+  const HandleEditBudgetSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     console.log(rideDetails);
+
+    // const response = await fetchURL({
+    //   path: `http://localhost:4000/`,
+    //   method: "GET",
+    //   data: JSON.stringify(rideDetails),
+    // });
+
+    // const data = await response.json();
+
+    // if (data.status === 200) {
+    //   alert("Ride details updated successfully.");
+    //   navigate("/find");
+    //   setIsLoading(false);
+    // } else {
+    //   setIsLoading(false);
+    //   alert("Something went wrong. Please try again.");
+    // }
+    // useLocalStorage("rideDetails", rideDetails);
+
+    window.location.href = "http://localhost:4000";
   };
 
   return (
@@ -26,7 +51,7 @@ const BudgetModal = () => {
         <form
           action=""
           autoComplete="new-password"
-          onSubmit={handleEditBudgetSubmit}
+          onSubmit={HandleEditBudgetSubmit}
         >
           <div className="flex items-center justify-between mb-4 mt-2">
             <Link to="/">

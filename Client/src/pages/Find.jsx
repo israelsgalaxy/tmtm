@@ -23,7 +23,7 @@ const Find = () => {
       <div className="">
         <Navbar />
       </div>
-      <div className="min-h-screen mt-6 px-3 sm:px-9 xl:px-20">
+      <div className="min-h-screen mt-6 px-4 sm:px-10 md:px-20 lg:px-24 xl:px-28">
         <div className="flex flex-col">
           <h1 className="text-2xl font-raleway font-normal md:text-left mb-4 text-blueDeep">
             Find Riders

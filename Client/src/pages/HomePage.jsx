@@ -9,7 +9,7 @@ const HomePage = () => {
         <Navbar />
       </div>
       <div className="h-screen flex justify-center items-center">
-        <div className="container mx-auto flex flex-col lg:flex-row lg:space-x-8 px-4 md:px-0">
+        <div className="px-4 sm:px-10 md:px-20 lg:px-24 xl:px-28 mx-auto flex flex-col lg:flex-row lg:space-x-8">
           <div className="left lg:w-1/2 flex flex-col justify-center items-center md:items-start mb-8">
             <h1 className="font-black text-5xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-9xl font-sans text-center md:text-left mb-4 text-blueDeep">
               <span className="text-2xl sm:text-3xl font-light font-raleway">
@@ -26,7 +26,7 @@ const HomePage = () => {
             </p>
             <Link to="/map">
               <button className="bg-blueDeep hover:bg-yellow-600 text-white font-normal text-lg py-3 w-full px-12 md:w-[300px] font-raleway rounded-md">
-                <i class="fa-solid fa-taxi fa-md fa-fw text-white pr-4"></i>
+                <i className="fa-solid fa-taxi fa-md fa-fw text-white pr-4"></i>
                 <span className="pl-2">Let's Ride</span>
               </button>
             </Link>

@@ -19,6 +19,10 @@ const BudgetModal = () => {
     uuid: "",
   });
 
+  const handleFocus = (event) => {
+    console.log(event.target.value);
+  };
+
   const HandleEditBudgetSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -40,6 +44,7 @@ const BudgetModal = () => {
     //   setIsLoading(false);
     //   alert("Something went wrong. Please try again.");
     // }
+
     // useLocalStorage("rideDetails", rideDetails);
 
     window.location.href = "http://localhost:4000";

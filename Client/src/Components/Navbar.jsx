@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="flex flex-row flex-wrap py-6 md:items-center justify-between text-gray-700 px-4 md:px-9 xl:px-20"
+        className="flex flex-row flex-wrap py-6 md:items-center justify-between text-gray-700 px-4 sm:px-10 md:px-20 lg:px-24 xl:px-28"
         id="navbar"
       >
         <div className="flex">

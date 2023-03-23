@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import { v4 as uuidV4 } from "uuid";
-import useFetch from "../hooks/useFetch";
-import { useNavigate } from "react-router-dom";
-import useLocalStorage from "../hooks/useLocalStorage";
+// import useFetch from "../hooks/useFetch";
+// import { useNavigate } from "react-router-dom";
+// import useLocalStorage from "../hooks/useLocalStorage";
 
 const BudgetModal = () => {
-  const navigate = useNavigate();
-  const { fetchURL } = useFetch();
+  // const navigate = useNavigate();
+  // const { fetchURL } = useFetch();
   const [isLoading, setIsLoading] = useState(false);
   const [showDatePickers, setShowDatePickers] = useState(false);
 
@@ -18,10 +18,6 @@ const BudgetModal = () => {
     amount: 0,
     uuid: "",
   });
-
-  const handleFocus = (event) => {
-    console.log(event.target.value);
-  };
 
   const HandleEditBudgetSubmit = async (e) => {
     e.preventDefault();
@@ -182,6 +178,7 @@ const BudgetModal = () => {
                   name="amount"
                   id="amount"
                   autoComplete="off"
+                  required
                   placeholder={rideDetails.amount}
                   defaultValue={rideDetails.amount}
                   onChange={(e) =>

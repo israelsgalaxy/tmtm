@@ -7,6 +7,7 @@ import MapPage from "./pages/Map";
 import NotFound from "./pages/NotFound";
 import HomePage from "./pages/HomePage";
 import Find from "./pages/Find";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/find" element={<Find />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </ThemeProvider>

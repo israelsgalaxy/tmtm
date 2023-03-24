@@ -20,9 +20,9 @@ const PaginatedTransactions = ({ transactions }) => {
 
   return (
     <div className="">
-      <div className="flex items-center justify-between mt-8">
+      <div className="flex items-center justify-between mt-6">
         {currentTransactions.length !== 0 && (
-          <p className="text-gray-700 dark:text-gray-300 font-number text-lg font-normal">
+          <p className="text-gray-700 dark:text-gray-300 font-number text-lg font-light">
             {startIndex + 1}-{Math.min(endIndex, transactions.length)} of{" "}
             {transactions.length}
           </p>
@@ -35,7 +35,7 @@ const PaginatedTransactions = ({ transactions }) => {
 
         <div className="mr-4">
           <select
-            className="p-1.5 mx-1.5 font-number font-normal bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-blueDeep focus:outline-none rounded-md"
+            className="p-1.5 mx-1.5 font-number font-normal text-gray-800 dark:text-gray-200 border border-gray-400 focus:outline-none rounded-md"
             value={transactionsPerPage}
             onChange={handleTransactionsPerPageChange}
           >
@@ -48,10 +48,10 @@ const PaginatedTransactions = ({ transactions }) => {
         </div>
       </div>
 
-      <div className="hidden md:table mt-8 w-full font-raleway">
-        <div className="flex flex-col overflow-x-auto min-w-full align-middle">
+      <div className="hidden md:table mt-8 font-raleway w--full overflow-scroll">
+        <div className="flex flex-col ">
           {currentTransactions.length !== 0 && (
-            <table className="min-w-full divide-y divide-gray-400 dark:divide-gray-500 font-raleway">
+            <table className=" divide-y divide-gray-400 dark:divide-gray-500 font-raleway">
               <thead>
                 <tr>
                   <th
@@ -88,7 +88,7 @@ const PaginatedTransactions = ({ transactions }) => {
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-200 uppercase"
                   >
-                    Action
+                    Contact
                   </th>
                 </tr>
               </thead>
@@ -113,13 +113,8 @@ const PaginatedTransactions = ({ transactions }) => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-400">
                       {element.destination}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-400">
-                      <a
-                        href="#edit"
-                        className="text-blue-500 hover:text-blue-700"
-                      >
-                        Edit
-                      </a>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-400 font-number font-light">
+                      {element.phone}
                     </td>
                   </tr>
                 ))}

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // import { v4 as uuidV4 } from "uuid";
 // import useFetch from "../hooks/useFetch";
 // import { useNavigate } from "react-router-dom";
-// import useLocalStorage from "../hooks/useLocalStorage";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const BudgetModal = () => {
   // const navigate = useNavigate();
@@ -11,7 +11,7 @@ const BudgetModal = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showDatePickers, setShowDatePickers] = useState(false);
 
-  const [rideDetails, setRideDetails] = useState({
+  const [rideDetails, setRideDetails] = useLocalStorage("ride", {
     location: "Ikeja, Lagos",
     date: new Date().toISOString().slice(0, 10),
     time: new Date().toISOString().slice(11, 16),
@@ -22,7 +22,6 @@ const BudgetModal = () => {
   const HandleEditBudgetSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log(rideDetails);
 
     // const response = await fetchURL({
     //   path: `http://localhost:4000/`,
@@ -40,8 +39,6 @@ const BudgetModal = () => {
     //   setIsLoading(false);
     //   alert("Something went wrong. Please try again.");
     // }
-
-    // useLocalStorage("rideDetails", rideDetails);
 
     window.location.href = "http://localhost:4000";
   };

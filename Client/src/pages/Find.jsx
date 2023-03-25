@@ -66,7 +66,7 @@ const Find = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <div className="p-7 bg-gray-100 dark:bg-gray-700 rounded-md mt-8">
+              <div className="md:w-[400px] p-7 bg-gray-100 dark:bg-gray-700 rounded-md mt-8">
                 <div className="flex justify-between items-center">
                   <p className="text-md font-number font-light text-gray-800 dark:text-gray-300">
                     {ride.date} | {ride.time}

@@ -48,10 +48,10 @@ const PaginatedTransactions = ({ transactions }) => {
         </div>
       </div>
 
-      <div className="hidden md:table mt-8 font-raleway w--full overflow-scroll">
-        <div className="flex flex-col ">
+      <div className="hidden md:table mt-8 font-raleway w-full">
+        <div className="flex flex-col overflow-x-auto min-w-full align-middle">
           {currentTransactions.length !== 0 && (
-            <table className=" divide-y divide-gray-400 dark:divide-gray-500 font-raleway">
+            <table className=" divide-y divide-gray-400 dark:divide-gray-500 font-raleway w-full">
               <thead>
                 <tr>
                   <th

@@ -21,6 +21,8 @@ const Find = () => {
   });
 
   const [ride, setRide] = useLocalStorage("ride");
+  const [rideDetails, setRideDetails] = useLocalStorage("rideDetails", {});
+
   console.log(ride);
 
   const { filteredData, searchQuery, handleSearchQueryChange, handleReset } =

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
+import HomeImage from "../Assets/images/3682361.jpg";
 
 const HomePage = () => {
   return (
@@ -32,7 +33,9 @@ const HomePage = () => {
             </Link>
             <div className=" md:hidden  bg-blueDeep h-[450px] md:w-[380px] w-full mt-6 rounded-xl"></div>
           </div>
-          <div className="right lg:w-1/2 flex justify-center items-center bg-gray-300 h-full"></div>
+          <div className="right lg:w-1/2 flex justify-center items-center bg-gray-300 h-full">
+            <img src={HomeImage} alt="" />
+          </div>
         </div>
       </div>
     </>

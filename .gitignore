@@ -1,9 +1,0 @@
-/node_modules
-.yarn/*
-!.yarn/releases/
-/build
-/Client/node_modules
-/Client/.pnp
-/Client/*.DS_Store
-/Client/.env
-/Client/.env.local
